@@ -20,9 +20,15 @@
 
 
 <script type="text/html" id="T_FretTableHeaderCell">
-    <div class="g-th" data-bind="
-            text: $data.fret">
+    <!-- ko if: $data.fret == 0 -->
+    <div class="button" data-bind="click: $root.removeThisFretBoard">
+        del
     </div>
+    <!-- /ko -->
+    <!-- ko ifnot: $data.fret == 0 -->
+    <div class="g-th" data-bind="text: $data.fret">
+    </div>
+    <!-- /ko -->
 </script>
 
 

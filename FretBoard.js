@@ -1,9 +1,13 @@
 
-var FretBoard = function() {
+var FretBoard = function(multiFretBoard) {
     var self = this;
-    
+
+    self.multiFretBoard = multiFretBoard;
+    self.fretBoardId = null;
+
     self.table = ko.observableArray([]);
     self.selectedNotes = ko.observableArray([]);
+
 
     var noteNames = {
          0: "A",
@@ -75,6 +79,12 @@ var FretBoard = function() {
             tab.push(string);
         }
         self.table(tab);
+    };
+
+    self.removeThisFretBoard = function() {
+        if (self.multiFretBoard) {
+            self.multiFretBoard.removeFretBoard(self);
+        }
     };
 
     self.pluginViews = function(){
