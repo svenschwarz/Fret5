@@ -2,17 +2,27 @@
 .g-table {
     display: table;
     border-color: black;
-    border-style: solid;
-    border-width: 1px;
-
+    border-style: none;
     border-collapse: collapse;
 }
 
 .g-tr {
     display: table-row;
-    border-color: black;
-    border-bottom-style: solid;
-    border-width: 1px;
+}
+
+.g-th {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+
+    min-width: 40px;
+    height: 20px;
+
+    padding: 2px;
+}
+
+.g-th:first-child {
+    visibility: hidden;
 }
 
 .g-td {
@@ -20,15 +30,22 @@
     text-align: center;
     vertical-align: middle;
 
-    width: 40px;
     min-width: 40px;
-    max-width: 40px;
     height: 20px;
 
     padding: 2px;
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
+
+    cursor: pointer;
+}
+
+.g-td:not(:first-child) {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-style: none;
 }
 
 .highlighted {

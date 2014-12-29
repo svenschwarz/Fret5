@@ -4,13 +4,21 @@
 
 
 <script type="text/html" id="T_FretTable">
-    <div class="g-table" data-bind="template: { name: 'T_FretTableRow', foreach: $data }">
+    <div class="g-table">
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableHeaderCell', foreach: $data[0] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[0] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[1] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[2] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[3] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[4] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[5] }" />
     </div>
 </script>
 
 
-<script type="text/html" id="T_FretTableRow">
-    <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data }">
+<script type="text/html" id="T_FretTableHeaderCell">
+    <div class="g-th" data-bind="
+            text: $data.fret">
     </div>
 </script>
 
