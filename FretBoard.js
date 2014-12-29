@@ -46,8 +46,10 @@ var FretBoard = function() {
         var i = findCellWithNote(selectedNotes, cell);
         if (i < 0) {
             selectedNotes.push(cell);
-            self.selectedNotes( selectedNotes );
+        } else {
+            selectedNotes.splice(i, 1);
         }
+        self.selectedNotes( selectedNotes );
         createTable();
     };
 
