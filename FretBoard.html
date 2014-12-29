@@ -1,0 +1,24 @@
+<div id="FretBoard" data-bind="template: { name: 'T_FretTable', data: table }">
+</div>
+
+
+
+<script type="text/html" id="T_FretTable">
+    <div class="g-table" data-bind="template: { name: 'T_FretTableRow', foreach: $data }">
+    </div>
+</script>
+
+
+<script type="text/html" id="T_FretTableRow">
+    <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data }">
+    </div>
+</script>
+
+
+<script type="text/html" id="T_FretTableCell">
+    <div class="g-td" data-bind="
+            text: $data.name,
+            click: $root.clickOnCell.bind($root, $data),
+            css: { highlighted: $data.isHighlighted }">
+    </div>
+</script>

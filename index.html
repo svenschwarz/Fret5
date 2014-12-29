@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>Fret5</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Fret5">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="pimo5.png" />-->
+    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />-->
+
+    <meta name="viewport" content="minimal-ui, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable = no" />
+    <meta name="viewport" content="minimal-ui, initial-scale = 1.0, user-scalable = no, minimum-scale=1.0, maximum-scale=1.0" media="(device-height: 568px)" />
+
+    <script type="text/javascript" src="libs/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="libs/knockout-2.3.0.js"></script>
+    <!--<script type="text/javascript" src="libs/sammy.js"></script>-->
+
+    <script type="text/javascript" src="koutils.js"></script>
+
+    <script type="text/javascript" src="FretBoard.js"></script>
+
+    <link rel="stylesheet" href="fret5.css" type="text/css" />
+
+</head>
+<body>
+
+
+<div id="mainContent">
+</div>
+
+
+<script type="text/javascript">
+    var vm = new FretBoard();
+    vm.selectedNotes().push(3);
+    koutils.setInSection("mainContent", "FretBoard.html", "FretBoard", vm);
+</script>
+
+
+</body>
+</html>
