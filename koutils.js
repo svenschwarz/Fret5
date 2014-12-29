@@ -23,9 +23,16 @@ koutils.loadHtml = function(htmlFile) {
     return result_html;
 };
 
-koutils.addToSectionSync = function(section, htmlFile, htmlElementId, viewModel) {
+koutils.addToSectionSync = function(section, htmlFile, htmlElementId, viewModel, newElementId) {
     var html = koutils.loadHtml( htmlFile );  // no callback => synchronous
     $('body #' + section).append(html);
+
+    if (newElementId !== undefined) {
+        if (newElementId === true)
+            newElementId = htmlElementId + new Date().getTime();
+        $('body #' + section + " #" + htmlElementId).attr("id", newElementId);
+        htmlElementId = newElementId;
+    }
 
     if( viewModel && viewModel.pluginViews ) {
         viewModel.pluginViews();
@@ -42,15 +49,19 @@ koutils.addToSectionSync = function(section, htmlFile, htmlElementId, viewModel)
     //        ko.applyBindings(viewModel, document.getElementById(htmlElementId));
     //    }
     //}
+
+    return htmlElementId;
 };
 
-koutils.setInSection = function(section, htmlFile, htmlElementId, viewModel) {
+koutils.setInSection = function(section, htmlFile, htmlElementId, viewModel, newElementId) {
     koutils.clearSection(section);
-    koutils.addToSectionSync(section, htmlFile, htmlElementId, viewModel);
+    var newElementId = koutils.addToSectionSync(section, htmlFile, htmlElementId, viewModel, newElementId);
 
     //// scroll to the top
     //document.body.scrollTop = 0;
     //document.documentElement.scrollTop = 0;
+
+    return newElementId;
 };
 
 koutils.clearSection = function(section) {

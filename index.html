@@ -34,8 +34,19 @@
 
 
 <script type="text/javascript">
-    var vm = new FretBoard();
-    koutils.setInSection("mainContent", "FretBoard.html", "FretBoard", vm);
+    koutils.clearSection("mainContent");
+
+    var vm1 = new FretBoard();
+    var fret1 = koutils.addToSectionSync("mainContent", "FretBoard.html", "FretBoard", vm1, true);
+
+    var vm2 = new FretBoard();
+    var fret2 = koutils.addToSectionSync("mainContent", "FretBoard.html", "FretBoard", vm2, true);
+
+    var vm3 = new FretBoard();
+    var fret3 = koutils.addToSectionSync("mainContent", "FretBoard.html", "FretBoard", vm3, true);
+
+    var vm4 = new FretBoard();
+    var fret4 = koutils.addToSectionSync("mainContent", "FretBoard.html", "FretBoard", vm4, true);
 </script>
 
 
