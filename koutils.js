@@ -34,11 +34,12 @@ koutils.addToSectionSync = function(section, htmlFile, htmlElementId, viewModel,
         htmlElementId = newElementId;
     }
 
+    ko.applyBindings(viewModel, document.getElementById(htmlElementId));
+
     if( viewModel && viewModel.pluginViews ) {
         viewModel.pluginViews();
     }
 
-    ko.applyBindings(viewModel, document.getElementById(htmlElementId));
     //if (htmlElementId && viewModel) {
     //    if( viewModel.readyToBind ) {
     //        koutils.ViewModel_chain( viewModel.readyToBind, function() {

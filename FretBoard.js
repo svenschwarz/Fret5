@@ -2,8 +2,8 @@
 var FretBoard = function() {
     var self = this;
     
-    self.table = ko.observable([]);
-    self.selectedNotes = ko.observable([]);
+    self.table = ko.observableArray([]);
+    self.selectedNotes = ko.observableArray([]);
 
     var noteNames = {
          0: "A",
@@ -77,5 +77,8 @@ var FretBoard = function() {
         self.table(tab);
     };
 
-    createTable();
+    self.pluginViews = function(){
+        createTable();
+    };
+
 };

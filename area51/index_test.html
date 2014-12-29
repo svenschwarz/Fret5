@@ -15,30 +15,45 @@
     <meta name="viewport" content="minimal-ui, width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable = no" />
     <meta name="viewport" content="minimal-ui, initial-scale = 1.0, user-scalable = no, minimum-scale=1.0, maximum-scale=1.0" media="(device-height: 568px)" />
 
-    <script type="text/javascript" src="libs/jquery-2.1.0.js"></script>
-    <!--<script type="text/javascript" src="libs/knockout-2.3.0.js"></script>-->
-    <script type="text/javascript" src="libs/knockout-2.3.0.debug.js"></script>
+    <script type="text/javascript" src="../libs/jquery-2.1.0.js"></script>
+    <script type="text/javascript" src="../libs/knockout-2.3.0.js"></script>
     <!--<script type="text/javascript" src="libs/sammy.js"></script>-->
 
-    <script type="text/javascript" src="koutils.js"></script>
+    <script type="text/javascript" src="../koutils.js"></script>
 
-    <script type="text/javascript" src="FretBoard.js"></script>
-    <script type="text/javascript" src="MultiFretBoard.js"></script>
+    <script type="text/javascript" src="../FretBoard.js"></script>
+    <script type="text/javascript" src="../MultiFretBoard.js"></script>
 
-    <link rel="stylesheet" href="fret5.css" type="text/css" />
+    <link rel="stylesheet" href="../fret5.css" type="text/css" />
 
 </head>
 <body>
 
 
 <div id="mainContent">
+    <div id="eins">
+        x = <span data-bind="text: x"></span>
+
+        <div id="zwei">
+        </div>
+    </div>
+
 </div>
 
 
 <script type="text/javascript">
-    koutils.clearSection("mainContent");
-    var vm = new MultiFretBoard();
-    var id = koutils.addToSectionSync("mainContent", "MultiFretBoard.html", "MultiFretBoard", vm, true);
+    var vm1 = {
+        x: ko.observable("hallo")
+    };
+    var el1 = $("#eins")[0];
+    ko.applyBindings(vm1, el1);
+
+    var vm2 = {
+        y: ko.observable("welt")
+    };
+    var el2 = $("#zwei")[0];
+    $("#zwei").html( 'y = <span data-bind="text: y"></span>' );
+    ko.applyBindings(vm2, el2);
 </script>
 
 

@@ -51,3 +51,20 @@
 .highlighted {
     background-color: yellow;
 }
+
+.button {
+    display: inline-block;
+    cursor: pointer;
+
+    color: white;
+    background-color: blue;
+    border-color: blue;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 12px;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
