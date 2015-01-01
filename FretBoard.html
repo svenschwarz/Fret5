@@ -26,16 +26,25 @@
     </div>
     <!-- /ko -->
     <!-- ko ifnot: $data.fret == 0 -->
-    <div class="g-th" data-bind="text: $data.fret">
+    <div class="g-th">
+        <div class="fret-in-table" data-bind="text: $data.fret" />
     </div>
     <!-- /ko -->
 </script>
 
 
 <script type="text/html" id="T_FretTableCell">
-    <div class="g-td" data-bind="
+    <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, $data)">
+        <div class="note-in-table" data-bind="
             text: $data.name,
-            click: $root.clickOnCell.bind($root, $data),
-            css: { highlighted: $data.isHighlighted }">
+            css: { highlighted: false && $data.isHighlighted }">
+        </div>
+        <!-- ko if: $data.isHighlighted -->
+        <div class="markerarea-in-table">
+            <span class="marker1-in-table">&nbsp;&nbsp;</span>
+            <span class="marker2-in-table">&nbsp;&nbsp;</span>
+        </div>
+        <!-- /ko -->
     </div>
 </script>
+
