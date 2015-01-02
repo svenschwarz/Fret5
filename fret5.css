@@ -79,6 +79,10 @@
     opacity: 0.5;
 }
 
+.note-in-line {
+    padding-left: 16px;
+}
+
 .markerarea-in-table {
     position: absolute;
     right: 4px;
@@ -89,6 +93,16 @@
     height: 100%;
     z-index: 1;
     /*opacity: 0.5;*/
+}
+
+.selected1-in-line {
+    padding: 8px;
+    background-color: yellow;
+    line-height: 24px;
+    vertical-align: middle;
+    z-index: 2;
+    color: gray;
+    font-weight: bold;
 }
 
 .marker1-in-table {
