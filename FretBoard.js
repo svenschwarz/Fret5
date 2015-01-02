@@ -9,6 +9,10 @@ var FretBoard = function(multiFretBoard) {
     self.table = ko.observableArray([]);
     self.selectedNotesArray = ko.observableArray([ [], [], [] ]);
 
+    self.keyTypeName = ko.computed(function(){
+        return self.key().getKeyTypeName();
+    });
+
     var startNotes = [
         31,  // E   7
         26,  // B   2
@@ -84,6 +88,11 @@ var FretBoard = function(multiFretBoard) {
 
     self.previousKey = function() {
         self.key().previousKey();
+        self.key( self.key() );
+    };
+
+    self.toggleKeyType = function() {
+        self.key().toggleKeyType();
         self.key( self.key() );
     };
 

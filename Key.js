@@ -18,11 +18,11 @@ var Key = function( keyNoteName, keyType) {
 
     var initNotes = function() {
         var offsets = durOffsets;
-        if (keyType) {
-            if (keyType == "m")
+        if (self.keyType) {
+            if (self.keyType == "m")
                 offsets = mollOffsets;
             else {
-                console.error("unexpected keyType in Key: " + keyType);
+                console.error("unexpected keyType in Key: " + self.keyType);
                 return;
             }
         }
@@ -44,6 +44,16 @@ var Key = function( keyNoteName, keyType) {
         return (self.notes.indexOf(note) >= 0);
     };
 
+    self.getKeyTypeName = function() {
+        if (!self.keyType)
+            return "dur";
+        else if (self.keyType == "m")
+            return "moll";
+
+        console.error("unknown key type in Key.getKeyTypeName: " + self.keyType);
+        return "???";
+    };
+
     self.nextKey = function() {
         self.keyNote = (self.keyNote + 1) % 12;
         self.keyNoteName = NOTE.getName(self.keyNote);
@@ -53,6 +63,11 @@ var Key = function( keyNoteName, keyType) {
     self.previousKey = function() {
         self.keyNote = (self.keyNote + 11) % 12;
         self.keyNoteName = NOTE.getName(self.keyNote);
+        initNotes();
+    };
+
+    self.toggleKeyType = function() {
+        self.keyType = (self.keyType == "m"  ?  undefined  :  "m");
         initNotes();
     };
 
