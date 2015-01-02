@@ -25,12 +25,12 @@ var FretBoard = function(multiFretBoard) {
     };
 
     var startNotes = [
-         7,  // E
-         2,  // B
-        10,  // G
-         5,  // D
-         0,  // A
-         7   // E
+        31,  // E   7
+        26,  // B   2
+        22,  // G  10
+        17,  // D   5
+        12,  // A   0
+         7   // E   7
     ];
 
 
