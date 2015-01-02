@@ -45,22 +45,27 @@
 
 <script type="text/html" id="T_FretTableCell">
     <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, $data)">
+        <!-- ko if: $root.key().contains($data.note) -->
         <div class="note-in-table" data-bind="
             text: $data.name,
             css: { highlighted: false && $data.isHighlighted }">
         </div>
+        <!-- /ko -->
+
+        <!-- ko if: $data.fret > 0 -->
+        <div class="string-line"></div>
+        <!-- /ko -->
+
+        <!-- ko if: ($data.fret == 3 && $data.string == 2) || ($data.fret == 5 && $data.string == 2) || ($data.fret == 7 && $data.string == 2) || ($data.fret == 9 && $data.string == 2) || ($data.fret == 12 && ($data.string == 0 || $data.string == 4))  ||  ($data.fret == 15 && $data.string == 2) || ($data.fret == 17 && $data.string == 2) || ($data.fret == 19 && $data.string == 2) || ($data.fret == 21 && $data.string == 2) -->
+        <div class="neck-dot" />
+        <!-- /ko -->
+
         <!-- ko if: $data.isSelected1 || $data.isSelected2 || $data.isSelected3 -->
         <div class="markerarea-in-table">
             <span class="marker1-in-table" data-bind="visible: $data.isSelected1">&nbsp;&nbsp;</span>
             <span class="marker2-in-table" data-bind="visible: $data.isSelected2">&nbsp;&nbsp;</span>
             <span class="marker3-in-table" data-bind="visible: $data.isSelected3">&nbsp;&nbsp;</span>
         </div>
-        <!-- /ko -->
-        <!-- ko ifnot: $data.fret == 0 -->
-        <div class="string-line"></div>
-        <!-- /ko -->
-        <!-- ko if: ($data.fret == 3 && $data.string == 2) || ($data.fret == 5 && $data.string == 2) || ($data.fret == 7 && $data.string == 2) || ($data.fret == 9 && $data.string == 2) || ($data.fret == 12 && ($data.string == 0 || $data.string == 4))  ||  ($data.fret == 15 && $data.string == 2) || ($data.fret == 17 && $data.string == 2) || ($data.fret == 19 && $data.string == 2) || ($data.fret == 21 && $data.string == 2) -->
-        <div class="neck-dot" />
         <!-- /ko -->
     </div>
 </script>

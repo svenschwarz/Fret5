@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb4d062d-8c88-48c6-8388-151b2dd6c032" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Key.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.html" afterPath="$PROJECT_DIR$/FretBoard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.js" afterPath="$PROJECT_DIR$/FretBoard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MultiFretBoard.html" afterPath="$PROJECT_DIR$/MultiFretBoard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fret5.css" afterPath="$PROJECT_DIR$/fret5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Fret5.iws" />
@@ -30,20 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FretBoard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.269231" vertical-offset="525" max-vertical-offset="1241">
-              <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.5017241" vertical-offset="559" max-vertical-offset="1326">
+              <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fret5.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fret5.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fret5.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2584814" vertical-offset="2628" max-vertical-offset="3247">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3247">
               <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
               <folding />
             </state>
@@ -53,8 +53,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="867">
-              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+            <state vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="884">
+              <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -97,8 +97,18 @@
       <file leaf-file-name="FretBoard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
-              <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="1734">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Key.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Key.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -140,14 +150,15 @@
         <option value="$PROJECT_DIR$/AllFrets.html" />
         <option value="$PROJECT_DIR$/AllFrets.js" />
         <option value="$PROJECT_DIR$/index_test.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/koutils.js" />
         <option value="$PROJECT_DIR$/MultiFretBoard.js" />
         <option value="$PROJECT_DIR$/area51/overlapping_div.html" />
         <option value="$PROJECT_DIR$/MultiFretBoard.html" />
-        <option value="$PROJECT_DIR$/FretBoard.js" />
-        <option value="$PROJECT_DIR$/FretBoard.html" />
         <option value="$PROJECT_DIR$/fret5.css" />
+        <option value="$PROJECT_DIR$/Key.js" />
+        <option value="$PROJECT_DIR$/FretBoard.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/FretBoard.html" />
       </list>
     </option>
   </component>
@@ -372,7 +383,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420213147047</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="changed: from table look and feel to strings l%f">
+      <created>1420215855317</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1420215855317</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -426,7 +443,8 @@
     <MESSAGE value="minor css enhancement" />
     <MESSAGE value="octaves of notes are now correct" />
     <MESSAGE value="show selected notes" />
-    <option name="LAST_COMMIT_MESSAGE" value="show selected notes" />
+    <MESSAGE value="changed: from table look and feel to strings l%f" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed: from table look and feel to strings l%f" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -609,6 +627,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="87076" max-vertical-offset="154785">
           <caret line="5146" column="4" selection-start-line="5146" selection-start-column="4" selection-end-line="5146" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -616,14 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="648" max-vertical-offset="1564">
           <caret line="60" column="85" selection-start-line="60" selection-start-column="85" selection-end-line="60" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="287" max-vertical-offset="867">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -680,26 +691,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fret5.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3247">
+          <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Key.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        <state vertical-scroll-proportion="-10.2" vertical-offset="0" max-vertical-offset="1734">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.884615" vertical-offset="0" max-vertical-offset="884">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.269231" vertical-offset="525" max-vertical-offset="1241">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fret5.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2584814" vertical-offset="2628" max-vertical-offset="3247">
-          <caret line="164" column="35" selection-start-line="164" selection-start-column="35" selection-end-line="164" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5017241" vertical-offset="559" max-vertical-offset="1326">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="53" selection-end-line="50" selection-end-column="53" />
           <folding />
         </state>
       </provider>
