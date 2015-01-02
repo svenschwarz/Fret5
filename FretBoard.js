@@ -5,6 +5,7 @@ var FretBoard = function(multiFretBoard) {
     self.multiFretBoard = multiFretBoard;
     self.fretBoardId = null;
 
+    //self.key = ko.observable( "A" );
     self.table = ko.observableArray([]);
     self.selectedNotesArray = ko.observableArray([ [], [], [] ]);
 

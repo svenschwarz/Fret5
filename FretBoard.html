@@ -4,7 +4,7 @@
 
     <!-- ko if: selectedNotesArray()[0].length > 0 -->
     <div class="selected1-in-line">
-        <label>Selected:</label>
+        <label>Yellow:</label>
         <span data-bind="foreach: selectedNotesArray()[0]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
@@ -32,7 +32,7 @@
 <script type="text/html" id="T_FretTableHeaderCell">
     <!-- ko if: $data.fret == 0 -->
     <div class="button" data-bind="click: $root.removeThisFretBoard">
-        del
+        x
     </div>
     <!-- /ko -->
     <!-- ko ifnot: $data.fret == 0 -->
@@ -55,6 +55,12 @@
             <span class="marker2-in-table" data-bind="visible: $data.isSelected2">&nbsp;&nbsp;</span>
             <span class="marker3-in-table" data-bind="visible: $data.isSelected3">&nbsp;&nbsp;</span>
         </div>
+        <!-- /ko -->
+        <!-- ko ifnot: $data.fret == 0 -->
+        <div class="string-line"></div>
+        <!-- /ko -->
+        <!-- ko if: ($data.fret == 3 && $data.string == 2) || ($data.fret == 5 && $data.string == 2) || ($data.fret == 7 && $data.string == 2) || ($data.fret == 9 && $data.string == 2) || ($data.fret == 12 && ($data.string == 0 || $data.string == 4))  ||  ($data.fret == 15 && $data.string == 2) || ($data.fret == 17 && $data.string == 2) || ($data.fret == 19 && $data.string == 2) || ($data.fret == 21 && $data.string == 2) -->
+        <div class="neck-dot" />
         <!-- /ko -->
     </div>
 </script>
