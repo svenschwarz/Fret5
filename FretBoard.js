@@ -9,22 +9,6 @@ var FretBoard = function(multiFretBoard) {
     self.table = ko.observableArray([]);
     self.selectedNotesArray = ko.observableArray([ [], [], [] ]);
 
-
-    var noteNames = {
-         0: "A",
-         1: "A#",
-         2: "B",
-         3: "C",
-         4: "C#",
-         5: "D",
-         6: "D#",
-         7: "E",
-         8: "F",
-         9: "F#",
-        10: "G",
-        11: "G#"
-    };
-
     var startNotes = [
         31,  // E   7
         26,  // B   2
@@ -67,7 +51,7 @@ var FretBoard = function(multiFretBoard) {
             for (var f = 0; f < 22; f++) {
                 var tone = start + f;
                 var note = tone % 12;
-                var name = noteNames[note];
+                var name = NOTE.getName(note);
                 var noteInfo = {
                     tone: tone,
                     note: note,
@@ -91,6 +75,16 @@ var FretBoard = function(multiFretBoard) {
 
     self.pluginViews = function(){
         createTable();
+    };
+
+    self.nextKey = function() {
+        self.key().nextKey();
+        self.key( self.key() );
+    };
+
+    self.previousKey = function() {
+        self.key().previousKey();
+        self.key( self.key() );
     };
 
 };

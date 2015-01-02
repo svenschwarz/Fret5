@@ -1,6 +1,9 @@
 <div id="FretBoard">
     <div class="key-line">
-        Key: <span data-bind="text: key().name"></span>
+        <label>Key:</label>
+        <span class="button" data-bind="click: previousKey">&lt;</span>
+        <span data-bind="text: key().name" style="display: inline-block; width: 40px; text-align: center;" />
+        <span class="button" data-bind="click: nextKey">&gt;</span>
     </div>
 
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
