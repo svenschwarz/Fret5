@@ -8,6 +8,7 @@ var FretBoard = function(multiFretBoard) {
     self.key = ko.observable( multiFretBoard.createMatchingKey() );
     self.table = ko.observableArray([]);
     self.markedNotesArray = ko.observableArray([ [], [], [] ]);
+    self.selectedColor = ko.observable(0);
 
     self.keyTypeName = ko.computed(function(){
         return self.key().getKeyTypeName();
@@ -36,7 +37,7 @@ var FretBoard = function(multiFretBoard) {
     self.clickOnCell = function(cell) {
         //alert(JSON.stringify(cell));
         var markedNotesArray = self.markedNotesArray();
-        var markedNotes = markedNotesArray[0];
+        var markedNotes = markedNotesArray[self.selectedColor()];
         var i = findCellWithNote(markedNotes, cell);
         if (i < 0) {
             markedNotes.push(cell);
@@ -64,6 +65,8 @@ var FretBoard = function(multiFretBoard) {
                     string: s
                 };
                 noteInfo.ismarked1 = (findCellWithNote(self.markedNotesArray()[0], noteInfo) >= 0);
+                noteInfo.ismarked2 = (findCellWithNote(self.markedNotesArray()[1], noteInfo) >= 0);
+                noteInfo.ismarked3 = (findCellWithNote(self.markedNotesArray()[2], noteInfo) >= 0);
                 string.push(noteInfo);
             }
             tab.push(string);
@@ -94,6 +97,10 @@ var FretBoard = function(multiFretBoard) {
     self.toggleKeyType = function() {
         self.key().toggleKeyType();
         self.key( self.key() );
+    };
+
+    self.selectColor = function(col) {
+        self.selectedColor(col);
     };
 
 };

@@ -69,7 +69,7 @@
 .note-in-table {
     position: absolute;
     left: 0px;
-    top: 0px;
+    top: 2px;
     padding-left: 2px;
     padding-right: 2px;
     padding-top: 3px;
@@ -103,7 +103,7 @@
 
 .marked1-in-line {
     padding: 8px;
-    background-color: lightyellow;
+    background-color: #ffffc0;
     line-height: 24px;
     vertical-align: middle;
     z-index: 30;
@@ -111,31 +111,63 @@
     font-weight: bold;
 }
 
+.marked2-in-line {
+    padding: 8px;
+    background-color: #ffe0c0;
+    line-height: 24px;
+    vertical-align: middle;
+    z-index: 30;
+    color: gray;
+    font-weight: bold;
+}
+
+.marked3-in-line {
+    padding: 8px;
+    background-color: #e0ffe0;
+    line-height: 24px;
+    vertical-align: middle;
+    z-index: 30;
+    color: gray;
+    font-weight: bold;
+}
+
+.marked1-in-line.selected, .marked2-in-line.selected, .marked3-in-line.selected  {
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+}
+
 .marker1-in-table {
-    background-color: yellow;
+    background-color: #ffff00;
     padding: 2px;
     border-color: gray;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
+    width: 10px;
+    display: inline-block;
 }
 
 .marker2-in-table {
-    background-color: orange;
+    background-color: #ffa500;
     padding: 2px;
     border-color: gray;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
+    width: 10px;
+    display: inline-block;
 }
 
 .marker3-in-table {
-    background-color: lightgreen;
+    background-color: #90ee90;
     padding: 2px;
     border-color: gray;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
+    width: 10px;
+    display: inline-block;
 }
 
 .highlighted {

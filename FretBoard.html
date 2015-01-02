@@ -12,14 +12,25 @@
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
     <br/>
 
-    <!-- ko if: markedNotesArray()[0].length > 0 -->
-    <div class="marked1-in-line">
-        <label>Yellow:</label>
+    <div class="marked1-in-line" data-bind="css: {selected: selectedColor() == 0}">
+        <label data-bind="click: selectColor.bind($root, 0)">Yellow:</label>
         <span data-bind="foreach: markedNotesArray()[0]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
     </div>
-    <!-- /ko -->
+    <div class="marked2-in-line" data-bind="css: {selected: selectedColor() == 1}">
+        <label data-bind="click: selectColor.bind($root, 1)">Orange:</label>
+        <span data-bind="foreach: markedNotesArray()[1]">
+            <span class="note-in-line" data-bind="text: $data.name" />
+        </span>
+    </div>
+    <div class="marked3-in-line" data-bind="css: {selected: selectedColor() == 2}">
+        <label data-bind="click: selectColor.bind($root, 2)">Green:</label>
+        <span data-bind="foreach: markedNotesArray()[2]">
+            <span class="note-in-line" data-bind="text: $data.name" />
+        </span>
+    </div>
+
     <br/>
     <hr style="width: 100%;" />
     <br/>
@@ -73,9 +84,9 @@
 
         <!-- ko if: $data.ismarked1 || $data.ismarked2 || $data.ismarked3 -->
         <div class="markerarea-in-table">
-            <span class="marker1-in-table" data-bind="visible: $data.ismarked1">&nbsp;&nbsp;</span>
-            <span class="marker2-in-table" data-bind="visible: $data.ismarked2">&nbsp;&nbsp;</span>
-            <span class="marker3-in-table" data-bind="visible: $data.ismarked3">&nbsp;&nbsp;</span>
+            <span data-bind="css: {'marker3-in-table': $data.ismarked3}">&nbsp;</span>
+            <span data-bind="css: {'marker2-in-table': $data.ismarked2}">&nbsp;</span>
+            <span data-bind="css: {'marker1-in-table': $data.ismarked1}">&nbsp;</span>
         </div>
         <!-- /ko -->
     </div>
