@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb4d062d-8c88-48c6-8388-151b2dd6c032" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.html" afterPath="$PROJECT_DIR$/FretBoard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.js" afterPath="$PROJECT_DIR$/FretBoard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Key.js" afterPath="$PROJECT_DIR$/Key.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MultiFretBoard.html" afterPath="$PROJECT_DIR$/MultiFretBoard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fret5.css" afterPath="$PROJECT_DIR$/fret5.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MultiFretBoard.js" afterPath="$PROJECT_DIR$/MultiFretBoard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Fret5.iws" />
@@ -31,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="1513">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1513">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
@@ -77,8 +75,8 @@
       <file leaf-file-name="FretBoard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-21.04" vertical-offset="1072" max-vertical-offset="1785">
-              <caret line="94" column="32" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -87,18 +85,18 @@
       <file leaf-file-name="Key.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Key.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiFretBoard.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MultiFretBoard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MultiFretBoard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.47819063" vertical-offset="146" max-vertical-offset="765">
+              <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -141,7 +139,6 @@
         <option value="$PROJECT_DIR$/AllFrets.js" />
         <option value="$PROJECT_DIR$/index_test.html" />
         <option value="$PROJECT_DIR$/koutils.js" />
-        <option value="$PROJECT_DIR$/MultiFretBoard.js" />
         <option value="$PROJECT_DIR$/area51/overlapping_div.html" />
         <option value="$PROJECT_DIR$/notes.js" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -149,9 +146,10 @@
         <option value="$PROJECT_DIR$/libs/knockout-2.3.0.debug.js" />
         <option value="$PROJECT_DIR$/MultiFretBoard.html" />
         <option value="$PROJECT_DIR$/fret5.css" />
-        <option value="$PROJECT_DIR$/FretBoard.js" />
-        <option value="$PROJECT_DIR$/Key.js" />
         <option value="$PROJECT_DIR$/FretBoard.html" />
+        <option value="$PROJECT_DIR$/Key.js" />
+        <option value="$PROJECT_DIR$/FretBoard.js" />
+        <option value="$PROJECT_DIR$/MultiFretBoard.js" />
       </list>
     </option>
   </component>
@@ -405,7 +403,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420237572104</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="allow changing from dur to moll">
+      <created>1420238664132</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1420238664132</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -464,7 +468,8 @@
     <MESSAGE value="show key" />
     <MESSAGE value="allow changing key (prev, next), only dur" />
     <MESSAGE value="look and feel enhancement" />
-    <option name="LAST_COMMIT_MESSAGE" value="look and feel enhancement" />
+    <MESSAGE value="allow changing from dur to moll" />
+    <option name="LAST_COMMIT_MESSAGE" value="allow changing from dur to moll" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -723,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MultiFretBoard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MultiFretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="255">
@@ -747,30 +744,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FretBoard.js">
+    <entry file="file://$PROJECT_DIR$/FretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.04" vertical-offset="1072" max-vertical-offset="1785">
-          <caret line="94" column="32" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1513">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Key.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FretBoard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FretBoard.html">
+    <entry file="file://$PROJECT_DIR$/MultiFretBoard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43965518" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.47819063" vertical-offset="146" max-vertical-offset="765">
+          <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

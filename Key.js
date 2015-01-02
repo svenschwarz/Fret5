@@ -75,4 +75,3 @@ var Key = function( keyNoteName, keyType) {
 };
 
 
-var Key_A = new Key("A");
