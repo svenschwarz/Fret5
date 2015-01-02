@@ -1,4 +1,8 @@
 <div id="FretBoard">
+    <div class="key-line">
+        Key: <span data-bind="text: key().name"></span>
+    </div>
+
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
     <br/>
 
