@@ -12,10 +12,10 @@
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
     <br/>
 
-    <!-- ko if: selectedNotesArray()[0].length > 0 -->
-    <div class="selected1-in-line">
+    <!-- ko if: markedNotesArray()[0].length > 0 -->
+    <div class="marked1-in-line">
         <label>Yellow:</label>
-        <span data-bind="foreach: selectedNotesArray()[0]">
+        <span data-bind="foreach: markedNotesArray()[0]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
     </div>
@@ -71,11 +71,11 @@
         <div class="neck-dot" />
         <!-- /ko -->
 
-        <!-- ko if: $data.isSelected1 || $data.isSelected2 || $data.isSelected3 -->
+        <!-- ko if: $data.ismarked1 || $data.ismarked2 || $data.ismarked3 -->
         <div class="markerarea-in-table">
-            <span class="marker1-in-table" data-bind="visible: $data.isSelected1">&nbsp;&nbsp;</span>
-            <span class="marker2-in-table" data-bind="visible: $data.isSelected2">&nbsp;&nbsp;</span>
-            <span class="marker3-in-table" data-bind="visible: $data.isSelected3">&nbsp;&nbsp;</span>
+            <span class="marker1-in-table" data-bind="visible: $data.ismarked1">&nbsp;&nbsp;</span>
+            <span class="marker2-in-table" data-bind="visible: $data.ismarked2">&nbsp;&nbsp;</span>
+            <span class="marker3-in-table" data-bind="visible: $data.ismarked3">&nbsp;&nbsp;</span>
         </div>
         <!-- /ko -->
     </div>

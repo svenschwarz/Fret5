@@ -7,7 +7,7 @@ var FretBoard = function(multiFretBoard) {
 
     self.key = ko.observable( multiFretBoard.createMatchingKey() );
     self.table = ko.observableArray([]);
-    self.selectedNotesArray = ko.observableArray([ [], [], [] ]);
+    self.markedNotesArray = ko.observableArray([ [], [], [] ]);
 
     self.keyTypeName = ko.computed(function(){
         return self.key().getKeyTypeName();
@@ -35,15 +35,15 @@ var FretBoard = function(multiFretBoard) {
 
     self.clickOnCell = function(cell) {
         //alert(JSON.stringify(cell));
-        var selectedNotesArray = self.selectedNotesArray();
-        var selectedNotes = selectedNotesArray[0];
-        var i = findCellWithNote(selectedNotes, cell);
+        var markedNotesArray = self.markedNotesArray();
+        var markedNotes = markedNotesArray[0];
+        var i = findCellWithNote(markedNotes, cell);
         if (i < 0) {
-            selectedNotes.push(cell);
+            markedNotes.push(cell);
         } else {
-            selectedNotes.splice(i, 1);
+            markedNotes.splice(i, 1);
         }
-        self.selectedNotesArray( selectedNotesArray );
+        self.markedNotesArray( markedNotesArray );
         createTable();
     };
 
@@ -63,7 +63,7 @@ var FretBoard = function(multiFretBoard) {
                     fret: f,
                     string: s
                 };
-                noteInfo.isSelected1 = (findCellWithNote(self.selectedNotesArray()[0], noteInfo) >= 0);
+                noteInfo.ismarked1 = (findCellWithNote(self.markedNotesArray()[0], noteInfo) >= 0);
                 string.push(noteInfo);
             }
             tab.push(string);
