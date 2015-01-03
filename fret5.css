@@ -85,7 +85,7 @@
 
     z-index: 30;
     opacity: 0.5;
-    color: gray;
+    color: lightgray;
     font-weight: bold;
 }
 
@@ -117,7 +117,7 @@
 
 .marked2-in-line {
     padding: 8px;
-    background-color: #ffe0c0;
+    background-color: #ffd0c0;
     line-height: 24px;
     vertical-align: middle;
     z-index: 30;
@@ -150,7 +150,7 @@
 .marker1-in-table {
     background-color: #ffff00;
     padding: 2px;
-    border-color: gray;
+    border-color: #ffff00;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
@@ -159,9 +159,9 @@
 }
 
 .marker2-in-table {
-    background-color: #ffa500;
+    background-color: #ff2000;
     padding: 2px;
-    border-color: gray;
+    border-color: #ff2000;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
@@ -172,7 +172,7 @@
 .marker3-in-table {
     background-color: #90ee90;
     padding: 2px;
-    border-color: gray;
+    border-color: #90ee90;
     border-style: solid;
     border-width: 1px;
     border-radius: 12px;
