@@ -68,10 +68,7 @@
 <script type="text/html" id="T_FretTableCell">
     <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, $data)">
         <!-- ko if: $root.key().contains($data.note) -->
-        <div class="note-in-table" data-bind="
-            text: $data.name,
-            css: { highlighted: false && $data.isHighlighted }">
-        </div>
+        <div class="note-in-table" data-bind="text: $data.name" />
         <!-- /ko -->
 
         <!-- ko if: $data.fret > 0 -->
@@ -84,9 +81,9 @@
 
         <!-- ko if: $data.ismarked1 || $data.ismarked2 || $data.ismarked3 -->
         <div class="markerarea-in-table">
-            <span data-bind="css: {'marker3-in-table': $data.ismarked3}">&nbsp;</span>
-            <span data-bind="css: {'marker2-in-table': $data.ismarked2}">&nbsp;</span>
-            <span data-bind="css: {'marker1-in-table': $data.ismarked1}">&nbsp;</span>
+            <span data-bind="css: {'marker3-in-table': $data.ismarked3, 'nomarker-in-table': !$data.ismarked3}">&nbsp;</span>
+            <span data-bind="css: {'marker2-in-table': $data.ismarked2, 'nomarker-in-table': !$data.ismarked2}">&nbsp;</span>
+            <span data-bind="css: {'marker1-in-table': $data.ismarked1, 'nomarker-in-table': !$data.ismarked1}">&nbsp;</span>
         </div>
         <!-- /ko -->
     </div>

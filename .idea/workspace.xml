@@ -31,8 +31,8 @@
       <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.769231" vertical-offset="1107" max-vertical-offset="1700">
-              <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+            <state vertical-scroll-proportion="-2.5384614" vertical-offset="1056" max-vertical-offset="1649">
+              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
@@ -44,8 +44,8 @@
       <file leaf-file-name="fret5.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fret5.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3989899" vertical-offset="3146" max-vertical-offset="4097">
-              <caret line="199" column="1" selection-start-line="199" selection-start-column="1" selection-end-line="199" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.543771" vertical-offset="0" max-vertical-offset="4182">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -56,7 +56,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
               <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+                <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -366,7 +369,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420242719701</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="black guitar neck">
+      <created>1420269958260</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1420269958260</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -429,7 +438,8 @@
     <MESSAGE value="fixed: key of new fret board was not defined well, now using key of &quot;lastAddedFretBoard&quot; (MultiFB knows that)" />
     <MESSAGE value="renamed selected to marked" />
     <MESSAGE value="allow selecting other mark color, layout of marks looks like shit, though" />
-    <option name="LAST_COMMIT_MESSAGE" value="allow selecting other mark color, layout of marks looks like shit, though" />
+    <MESSAGE value="black guitar neck" />
+    <option name="LAST_COMMIT_MESSAGE" value="black guitar neck" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -488,7 +498,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="1700">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
-          <folding />
+          <folding>
+            <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+            <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -531,7 +544,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1445">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+            <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -566,7 +582,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1445">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+            <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -601,7 +620,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1445">
           <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+            <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -716,14 +738,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1904">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1420242677735" expanded="true" signature="667:845" placeholder="{...}" />
+            <marker date="1420242677735" expanded="true" signature="716:820" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.769231" vertical-offset="1107" max-vertical-offset="1700">
-          <caret line="77" column="39" selection-start-line="77" selection-start-column="39" selection-end-line="77" selection-end-column="39" />
+        <state vertical-scroll-proportion="-2.5384614" vertical-offset="1056" max-vertical-offset="1649">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
@@ -733,8 +758,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fret5.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3989899" vertical-offset="3146" max-vertical-offset="4097">
-          <caret line="199" column="1" selection-start-line="199" selection-start-column="1" selection-end-line="199" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.543771" vertical-offset="0" max-vertical-offset="4182">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
