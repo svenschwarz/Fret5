@@ -16,6 +16,7 @@
     display: table;
     border-style: none;
     border-collapse: collapse;
+    background-color: black;
 }
 
 .g-tr {
@@ -31,10 +32,12 @@
     height: 20px;
 
     padding: 2px;
+
+    background-color: white;
 }
 
 .g-th:first-child {
-    visibility: hidden;
+    text-align: left;
 }
 
 .fret-in-table {
@@ -79,10 +82,12 @@
     height: 100%;
     text-align: center;
     vertical-align: middle;
+
     z-index: 30;
+    opacity: 0.5;
+    /*background-color: black;*/
     color: gray;
     font-weight: bold;
-    opacity: 0.5;
 }
 
 .note-in-line {
@@ -200,13 +205,13 @@
     top: 0px;
     padding: 0px;
     margin: 0px;
-    z-index: 20;
+    z-index: 0;
+    opacity: 0.5;
     width: 64px;
     height: 15px;
     border-bottom-color: lightgray;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    opacity: 0.5;
 }
 
 .neck-dot {
