@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb4d062d-8c88-48c6-8388-151b2dd6c032" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.html" afterPath="$PROJECT_DIR$/FretBoard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fret5.css" afterPath="$PROJECT_DIR$/fret5.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -31,7 +30,7 @@
       <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.4615383" vertical-offset="138" max-vertical-offset="1649">
+            <state vertical-scroll-proportion="28.846153" vertical-offset="1056" max-vertical-offset="1649">
               <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -44,8 +43,8 @@
       <file leaf-file-name="fret5.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fret5.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42929292" vertical-offset="2380" max-vertical-offset="4182">
-              <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.3989899" vertical-offset="3588" max-vertical-offset="4182">
+              <caret line="225" column="17" selection-start-line="225" selection-start-column="17" selection-end-line="225" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -381,7 +380,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420294540438</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="experiments enhancing l&amp;f">
+      <created>1420305112778</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1420305112779</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -446,7 +451,8 @@
     <MESSAGE value="allow selecting other mark color, layout of marks looks like shit, though" />
     <MESSAGE value="black guitar neck" />
     <MESSAGE value="fixed positioning of markers" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed positioning of markers" />
+    <MESSAGE value="experiments enhancing l&amp;f" />
+    <option name="LAST_COMMIT_MESSAGE" value="experiments enhancing l&amp;f" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -754,7 +760,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4615383" vertical-offset="138" max-vertical-offset="1649">
+        <state vertical-scroll-proportion="28.846153" vertical-offset="1056" max-vertical-offset="1649">
           <caret line="18" column="15" selection-start-line="18" selection-start-column="15" selection-end-line="18" selection-end-column="15" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -765,8 +771,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fret5.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42929292" vertical-offset="2380" max-vertical-offset="4182">
-          <caret line="155" column="24" selection-start-line="155" selection-start-column="24" selection-end-line="155" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.3989899" vertical-offset="3588" max-vertical-offset="4182">
+          <caret line="225" column="17" selection-start-line="225" selection-start-column="17" selection-end-line="225" selection-end-column="17" />
           <folding />
         </state>
       </provider>
