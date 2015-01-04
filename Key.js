@@ -1,7 +1,7 @@
 /**
  *
  * @param keyNoteName e.g. "A"
- * @param keyType "m" -> moll, otherwise -> dur
+ * @param keyType "m" -> minor/moll, otherwise -> major/dur
  * @constructor
  */
 var Key = function( keyNoteName, keyType) {
@@ -10,17 +10,17 @@ var Key = function( keyNoteName, keyType) {
     self.keyNoteName = keyNoteName;
     self.keyType = keyType;
 
-    var durOffsets = [0, 2, 4, 5, 7, 9, 11];
-    var mollOffsets = [0, 2, 3, 5, 7, 8, 10];
+    var majorOffsets = [0, 2, 4, 5, 7, 9, 11];
+    var minorOffsets = [0, 2, 3, 5, 7, 8, 10];
 
     self.keyNote = -1;
     self.notes = [];
 
     var initNotes = function() {
-        var offsets = durOffsets;
+        var offsets = majorOffsets;
         if (self.keyType) {
             if (self.keyType == "m")
-                offsets = mollOffsets;
+                offsets = minorOffsets;
             else {
                 console.error("unexpected keyType in Key: " + self.keyType);
                 return;
@@ -46,9 +46,9 @@ var Key = function( keyNoteName, keyType) {
 
     self.getKeyTypeName = function() {
         if (!self.keyType)
-            return "dur";
+            return "major";
         else if (self.keyType == "m")
-            return "moll";
+            return "minor";
 
         console.error("unknown key type in Key.getKeyTypeName: " + self.keyType);
         return "???";
