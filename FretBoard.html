@@ -12,9 +12,11 @@
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
     <br/>
 
-    <div data-bind="template: { name: 'T_MarkedNotes', data: 0 }" />
-    <div data-bind="template: { name: 'T_MarkedNotes', data: 1 }" />
-    <div data-bind="template: { name: 'T_MarkedNotes', data: 2 }" />
+    <table>
+        <tr data-bind="template: { name: 'T_MarkedNotes', data: 0 }" />
+        <tr data-bind="template: { name: 'T_MarkedNotes', data: 1 }" />
+        <tr data-bind="template: { name: 'T_MarkedNotes', data: 2 }" />
+    </table>
 
     <br/>
     <hr style="width: 100%;" />
@@ -76,7 +78,7 @@
 
 
 <script type="text/html" id="T_MarkedNotes">
-    <div data-bind="click: $root.selectColor.bind($root, $data),
+    <td data-bind="click: $root.selectColor.bind($root, $data),
                     css: { selected: $root.selectedColor() == $data,
                            'marked1-in-line': $data == 0,
                            'marked2-in-line': $data == 1,
@@ -86,14 +88,22 @@
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
 
-        <!-- ko if: $root.matchingChordsArray()[$data].length > 0 -->
-        &nbsp;&nbsp;=
+    </td>
+    <td data-bind="click: $root.selectColor.bind($root, $data),
+                    css: { selected: $root.selectedColor() == $data,
+                           'marked1-in-line': $data == 0,
+                           'marked2-in-line': $data == 1,
+                           'marked3-in-line': $data == 2 }">
+
         <span data-bind="foreach: $root.matchingChordsArray()[$data]">
             <label data-bind="text: '[' + $data.name + ']'" style="padding-left: 20px;"></label>
         </span>
-        <!-- /ko -->
 
-    </div>
+        <span class="button" data-bind="click: $root.enterChord.bind($root, $data)" style="padding-left: 10px;">
+            Q
+        </span>
+
+    </td>
 
 </script>
 

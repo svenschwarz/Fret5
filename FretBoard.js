@@ -35,6 +35,18 @@ var FretBoard = function(multiFretBoard) {
     };
 
 
+    var findMatchingChordsForColor = function(colorNumber) {
+        var markedNotes = self.markedNotesArray()[colorNumber];
+        var matchingChordsArray = self.matchingChordsArray();
+        var noteNumbers = markedNotes.map(function(cell){
+            return cell.note;
+        });
+        var matchingChords = CHORD_DB.findMatchingChords(noteNumbers);
+        matchingChordsArray[colorNumber] = matchingChords;
+        self.matchingChordsArray(matchingChordsArray);
+
+    };
+
     self.clickOnCell = function(cell) {
         //alert(JSON.stringify(cell));
         var markedNotesArray = self.markedNotesArray();
@@ -47,12 +59,31 @@ var FretBoard = function(multiFretBoard) {
         }
         self.markedNotesArray(markedNotesArray);
 
-        var matchingChordsArray = self.matchingChordsArray();
-        var noteNumbers = markedNotes.map(function(cell){ return cell.note; });
-        var matchingChords = CHORD_DB.findMatchingChords(noteNumbers);
-        matchingChordsArray[self.selectedColor()] = matchingChords;
-        self.matchingChordsArray(matchingChordsArray);
+        findMatchingChordsForColor(self.selectedColor());
+        createTable();
+    };
 
+    self.enterChord = function (colorNumber) {
+        var chordName = prompt("Enter name of chord, e.g. A or Ammaj9", "");
+        if (!chordName)
+            return;
+        var chord = CHORD_DB.findChordByName(chordName);
+
+        var markedNotesArray = self.markedNotesArray();
+
+        var markedNotes = [];
+        for (var i in chord.notes) {
+            var note = chord.notes[i];
+            var noteInfo = {
+                note: note,
+                name: NOTE.getName(note)
+            };
+            markedNotes.push(noteInfo);
+        }
+        markedNotesArray[colorNumber] = markedNotes;
+        self.markedNotesArray(markedNotesArray);
+
+        findMatchingChordsForColor(colorNumber);
         createTable();
     };
 

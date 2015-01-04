@@ -92,6 +92,15 @@ var ChordDB = function() {
         return matchingChords;
     };
 
+    self.findChordByName = function( chordName ) {
+        for (var i in self.chords) {
+            var chord = self.chords[i];
+            if (chord.name == chordName)
+                return chord;
+        }
+        return null;
+    };
+
     init();
 };
 
