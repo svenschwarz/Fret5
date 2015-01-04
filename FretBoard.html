@@ -12,42 +12,9 @@
     <div data-bind="template: { name: 'T_FretTable', data: table }" />
     <br/>
 
-    <div class="marked1-in-line" data-bind="css: {selected: selectedColor() == 0}">
-        <label data-bind="click: selectColor.bind($root, 0)">Yellow:</label>
-        <span data-bind="foreach: markedNotesArray()[0]">
-            <span class="note-in-line" data-bind="text: $data.name" />
-        </span>
-        <!-- ko if: matchingChordsArray()[0].length > 0 -->
-        &nbsp;&nbsp;=
-        <span data-bind="foreach: matchingChordsArray()[0]">
-            <label data-bind="text: '[' + $data.name + ']'" style="padding-left: 20px;"></label>
-        </span>
-        <!-- /ko -->
-    </div>
-    <div class="marked2-in-line" data-bind="css: {selected: selectedColor() == 1}">
-        <label data-bind="click: selectColor.bind($root, 1)">Red:</label>
-        <span data-bind="foreach: markedNotesArray()[1]">
-            <span class="note-in-line" data-bind="text: $data.name" />
-        </span>
-        <!-- ko if: matchingChordsArray()[1].length > 0 -->
-        &nbsp;&nbsp;=
-        <span data-bind="foreach: matchingChordsArray()[1]">
-            <label data-bind="text: '[' + $data.name + ']'" style="padding-left: 20px;"></label>
-        </span>
-        <!-- /ko -->
-    </div>
-    <div class="marked3-in-line" data-bind="css: {selected: selectedColor() == 2}">
-        <label data-bind="click: selectColor.bind($root, 2)">Green:</label>
-        <span data-bind="foreach: markedNotesArray()[2]">
-            <span class="note-in-line" data-bind="text: $data.name" />
-        </span>
-        <!-- ko if: matchingChordsArray()[2].length > 0 -->
-        &nbsp;&nbsp;=
-        <span data-bind="foreach: matchingChordsArray()[2]">
-            <label data-bind="text: '[' + $data.name + ']'" style="padding-left: 20px;"></label>
-        </span>
-        <!-- /ko -->
-    </div>
+    <div data-bind="template: { name: 'T_MarkedNotes', data: 0 }" />
+    <div data-bind="template: { name: 'T_MarkedNotes', data: 1 }" />
+    <div data-bind="template: { name: 'T_MarkedNotes', data: 2 }" />
 
     <br/>
     <hr style="width: 100%;" />
@@ -105,5 +72,28 @@
         </div>
         <!-- /ko -->
     </div>
+</script>
+
+
+<script type="text/html" id="T_MarkedNotes">
+    <div data-bind="click: $root.selectColor.bind($root, $data),
+                    css: { selected: $root.selectedColor() == $data,
+                           'marked1-in-line': $data == 0,
+                           'marked2-in-line': $data == 1,
+                           'marked3-in-line': $data == 2 }">
+
+        <span data-bind="foreach: $root.markedNotesArray()[$data]">
+            <span class="note-in-line" data-bind="text: $data.name" />
+        </span>
+
+        <!-- ko if: $root.matchingChordsArray()[$data].length > 0 -->
+        &nbsp;&nbsp;=
+        <span data-bind="foreach: $root.matchingChordsArray()[$data]">
+            <label data-bind="text: '[' + $data.name + ']'" style="padding-left: 20px;"></label>
+        </span>
+        <!-- /ko -->
+
+    </div>
+
 </script>
 
