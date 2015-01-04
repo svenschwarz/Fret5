@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb4d062d-8c88-48c6-8388-151b2dd6c032" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FretBoard.html" afterPath="$PROJECT_DIR$/FretBoard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Chord.js" afterPath="$PROJECT_DIR$/Chord.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Fret5.iws" />
@@ -27,10 +27,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FretBoard.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FretBoard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20862068" vertical-offset="287" max-vertical-offset="1955">
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1955">
               <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Chord.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Chord.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Chord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.2197092" vertical-offset="0" max-vertical-offset="1700">
+              <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -141,8 +141,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/FretBoard.js" />
         <option value="$PROJECT_DIR$/Key.js" />
-        <option value="$PROJECT_DIR$/Chord.js" />
         <option value="$PROJECT_DIR$/FretBoard.html" />
+        <option value="$PROJECT_DIR$/Chord.js" />
       </list>
     </option>
   </component>
@@ -474,7 +474,13 @@
       <option name="project" value="LOCAL" />
       <updated>1420379173543</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="using brackets [...] instead of '...' for chord names">
+      <created>1420379721848</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1420379721848</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -517,7 +523,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="refactored; allowing to add arbitrary amount of FretBoards" />
     <MESSAGE value="refactored; button for adding more fret boards" />
     <MESSAGE value="add and remove fret boards now working" />
     <MESSAGE value="experiments with multiple markers" />
@@ -542,7 +547,8 @@
     <MESSAGE value="addded normal triad chords (major and minor)" />
     <MESSAGE value="addded more chord types (7, maj7, m7, mmaj7)" />
     <MESSAGE value="addded more chord types" />
-    <option name="LAST_COMMIT_MESSAGE" value="addded more chord types" />
+    <MESSAGE value="using brackets [...] instead of '...' for chord names" />
+    <option name="LAST_COMMIT_MESSAGE" value="using brackets [...] instead of '...' for chord names" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -899,14 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chord.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="424" max-vertical-offset="2040">
@@ -917,7 +915,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FretBoard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20862068" vertical-offset="287" max-vertical-offset="1955">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="1955">
           <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#span#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -926,6 +924,14 @@
             <element signature="n#style#0;n#label#0;n#span#1;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#hr#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chord.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2197092" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>
