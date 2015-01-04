@@ -68,18 +68,14 @@ var FretBoard = function(multiFretBoard) {
         if (!chordName)
             return;
         var chord = CHORD_DB.findChordByName(chordName);
+        self.setChord(colorNumber, chord);
+    };
 
+    self.setChord = function (colorNumber, chord) {
         var markedNotesArray = self.markedNotesArray();
-
-        var markedNotes = [];
-        for (var i in chord.notes) {
-            var note = chord.notes[i];
-            var noteInfo = {
-                note: note,
-                name: NOTE.getName(note)
-            };
-            markedNotes.push(noteInfo);
-        }
+        var markedNotes = chord.notes.map(function(note){
+            return { note: note, name: NOTE.getName(note) };
+        });
         markedNotesArray[colorNumber] = markedNotes;
         self.markedNotesArray(markedNotesArray);
 
