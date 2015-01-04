@@ -21,7 +21,8 @@ var Chord = function(noteName, type) {
         self.note = NOTE.getNote(noteName);
         var notes = [];
         for (var i = 0; i < offsets.length; i++) {
-            notes.push( self.note + offsets[i] );
+            var n = (self.note + offsets[i]) % 12;
+            notes.push(n);
         }
         self.notes = notes;
     };
@@ -48,7 +49,15 @@ var ChordDB = function() {
 
     self.chords = [];
 
-    self.chords.push(new Chord("A",""));
+    var init = function() {
+        for (var t in [0,1]) {
+            var type = (t == 0  ?  ""  :  "m");
+            for (var note = 0; note < 12; note++) {
+                var noteName = NOTE.getName(note);
+                self.chords.push(new Chord(noteName, type));
+            }
+        }
+    };
 
     self.findMatchingChords = function( notes ) {
         var matchingChords = [];
@@ -60,6 +69,8 @@ var ChordDB = function() {
         }
         return matchingChords;
     };
+
+    init();
 };
 
 
