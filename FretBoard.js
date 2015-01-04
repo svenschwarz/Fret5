@@ -9,6 +9,7 @@ var FretBoard = function(multiFretBoard) {
     self.table = ko.observableArray([]);
     self.markedNotesArray = ko.observableArray([ [], [], [] ]);
     self.selectedColor = ko.observable(0);
+    self.matchingChordsArray = ko.observableArray([ [], [], [] ]);
 
     self.keyTypeName = ko.computed(function(){
         return self.key().getKeyTypeName();
@@ -44,7 +45,14 @@ var FretBoard = function(multiFretBoard) {
         } else {
             markedNotes.splice(i, 1);
         }
-        self.markedNotesArray( markedNotesArray );
+        self.markedNotesArray(markedNotesArray);
+
+        var matchingChordsArray = self.matchingChordsArray();
+        var noteNumbers = markedNotes.map(function(cell){ return cell.note; });
+        var matchingChords = CHORD_DB.findMatchingChords(noteNumbers);
+        matchingChordsArray[self.selectedColor()] = matchingChords;
+        self.matchingChordsArray(matchingChordsArray);
+
         createTable();
     };
 

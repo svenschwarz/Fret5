@@ -17,18 +17,36 @@
         <span data-bind="foreach: markedNotesArray()[0]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
+        <!-- ko if: matchingChordsArray()[0].length > 0 -->
+        &nbsp;&nbsp;=
+        <span data-bind="foreach: matchingChordsArray()[0]">
+            <label data-bind="text: '\'' + $data.name + '\''" style="padding-left: 20px;"></label>
+        </span>
+        <!-- /ko -->
     </div>
     <div class="marked2-in-line" data-bind="css: {selected: selectedColor() == 1}">
         <label data-bind="click: selectColor.bind($root, 1)">Red:</label>
         <span data-bind="foreach: markedNotesArray()[1]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
+        <!-- ko if: matchingChordsArray()[1].length > 0 -->
+        &nbsp;&nbsp;=
+        <span data-bind="foreach: matchingChordsArray()[1]">
+            <label data-bind="text: '\'' + $data.name + '\''" style="padding-left: 20px;"></label>
+        </span>
+        <!-- /ko -->
     </div>
     <div class="marked3-in-line" data-bind="css: {selected: selectedColor() == 2}">
         <label data-bind="click: selectColor.bind($root, 2)">Green:</label>
         <span data-bind="foreach: markedNotesArray()[2]">
             <span class="note-in-line" data-bind="text: $data.name" />
         </span>
+        <!-- ko if: matchingChordsArray()[2].length > 0 -->
+        &nbsp;&nbsp;=
+        <span data-bind="foreach: matchingChordsArray()[2]">
+            <label data-bind="text: '\'' + $data.name + '\''" style="padding-left: 20px;"></label>
+        </span>
+        <!-- /ko -->
     </div>
 
     <br/>
