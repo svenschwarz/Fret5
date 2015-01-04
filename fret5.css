@@ -12,6 +12,10 @@
     user-select: none;
 }
 
+body {
+    background-color: burlywood;
+}
+
 .g-table {
     display: table;
     border-style: none;
@@ -33,7 +37,7 @@
 
     padding: 2px;
 
-    background-color: white;
+    background-color: burlywood;
 }
 
 .g-th:first-child {
@@ -41,7 +45,7 @@
 }
 
 .fret-in-table {
-    color: lightgray;
+    color: gray;
 }
 
 .g-td {
@@ -237,5 +241,5 @@
 
 .key-line {
     font-weight: bold;
-    color: lightgray;
+    color: gray;
 }
