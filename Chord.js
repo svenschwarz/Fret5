@@ -1,4 +1,14 @@
 
+var CHORD_OFFSETS = {
+    ""      : [0, 4, 7],            //  1 - 3 - 5
+    "7"     : [0, 4, 7, 10],        //  1 - 3 - 5 - b7
+    "maj7"  : [0, 4, 7, 11],        //  1 - 3 - 5 - 7
+    "m"     : [0, 3, 7],            //  1 - b3 - 5
+    "m7"    : [0, 3, 7, 10],        //  1 - b3 - 5 - b7
+    "mmaj7" : [0, 3, 7, 11]         //  1 - b3 - 5 - 7
+};
+
+
 var Chord = function(noteName, type) {
     var self = this;
 
@@ -10,13 +20,12 @@ var Chord = function(noteName, type) {
     self.notes = null;
 
     var init = function() {
-        var offsets = [0, 4, 7];
-        if (self.type) {
-            if (self.type == "m")
-                offsets = [0, 3, 7];
-            else
-                console.error("unknown type in Chord: " + self.type);
-        }
+        if (!self.type)
+            self.type = "";
+        var offsets = CHORD_OFFSETS[self.type];
+        if (!offsets)
+            console.error("unknown type in Chord: " + self.type);
+
         self.name = (self.type  ?  self.noteName + self.type  :  self.noteName);
         self.note = NOTE.getNote(noteName);
         var notes = [];
@@ -50,8 +59,9 @@ var ChordDB = function() {
     self.chords = [];
 
     var init = function() {
-        for (var t in [0,1]) {
-            var type = (t == 0  ?  ""  :  "m");
+        var types = Object.keys(CHORD_OFFSETS);
+        for (var t in types) {
+            var type = types[t];
             for (var note = 0; note < 12; note++) {
                 var noteName = NOTE.getName(note);
                 self.chords.push(new Chord(noteName, type));
