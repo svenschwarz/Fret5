@@ -35,12 +35,12 @@
 <script type="text/html" id="T_FretTable">
     <div class="g-table">
         <div class="g-tr" data-bind="template: { name: 'T_FretTableHeaderCell', foreach: $data[0] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[0] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[1] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[2] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[3] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[4] }" />
-        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[5] }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[0], as: 'cell' }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[1], as: 'cell' }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[2], as: 'cell' }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[3], as: 'cell' }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[4], as: 'cell' }" />
+        <div class="g-tr" data-bind="template: { name: 'T_FretTableCell', foreach: $data[5], as: 'cell' }" />
     </div>
 </script>
 
@@ -55,24 +55,24 @@
 
 
 <script type="text/html" id="T_FretTableCell">
-    <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, $data)">
-        <!-- ko if: $root.key().contains($data.note) -->
-        <div class="note-in-table" data-bind="text: $data.name" />
+    <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, cell)">
+        <!-- ko if: $root.key().contains(cell.note) -->
+        <div class="note-in-table" data-bind="text: cell.name" />
         <!-- /ko -->
 
-        <!-- ko if: $data.fret > 0 -->
+        <!-- ko if: cell.fret > 0 -->
         <div class="string-line"></div>
         <!-- /ko -->
 
-        <!-- ko if: ($data.fret == 3 && $data.string == 2) || ($data.fret == 5 && $data.string == 2) || ($data.fret == 7 && $data.string == 2) || ($data.fret == 9 && $data.string == 2) || ($data.fret == 12 && ($data.string == 0 || $data.string == 4))  ||  ($data.fret == 15 && $data.string == 2) || ($data.fret == 17 && $data.string == 2) || ($data.fret == 19 && $data.string == 2) || ($data.fret == 21 && $data.string == 2) -->
+        <!-- ko if: (cell.fret == 3 && cell.string == 2) || (cell.fret == 5 && cell.string == 2) || (cell.fret == 7 && cell.string == 2) || (cell.fret == 9 && cell.string == 2) || (cell.fret == 12 && (cell.string == 0 || cell.string == 4))  ||  (cell.fret == 15 && cell.string == 2) || (cell.fret == 17 && cell.string == 2) || (cell.fret == 19 && cell.string == 2) || (cell.fret == 21 && cell.string == 2) -->
         <div class="neck-dot" />
         <!-- /ko -->
 
-        <!-- ko if: $data.ismarked1 || $data.ismarked2 || $data.ismarked3 -->
+        <!-- ko if: cell.ismarked1 || cell.ismarked2 || cell.ismarked3 -->
         <div class="markerarea-in-table">
-            <span data-bind="css: {'marker3-in-table': $data.ismarked3, 'nomarker-in-table': !$data.ismarked3}">&nbsp;</span>
-            <span data-bind="css: {'marker2-in-table': $data.ismarked2, 'nomarker-in-table': !$data.ismarked2}">&nbsp;</span>
-            <span data-bind="css: {'marker1-in-table': $data.ismarked1, 'nomarker-in-table': !$data.ismarked1}">&nbsp;</span>
+            <span data-bind="text: (cell.ismarked3 && $root.markedNotesArray()[2].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[2][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker3-in-table': cell.ismarked3, 'nomarker-in-table': !cell.ismarked3}"></span>
+            <span data-bind="text: (cell.ismarked2 && $root.markedNotesArray()[1].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[1][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker2-in-table': cell.ismarked2, 'nomarker-in-table': !cell.ismarked2}, attr: {title: (cell.ismarked2 ? cell.name : '')}"></span>
+            <span data-bind="text: (cell.ismarked1 && $root.markedNotesArray()[0].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[0][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker1-in-table': cell.ismarked1, 'nomarker-in-table': !cell.ismarked1}"></span>
         </div>
         <!-- /ko -->
     </div>
@@ -102,7 +102,7 @@
                    class="button" style="padding-left: 20px;" />
         </span>
 
-        <span class="button" data-bind="click: $root.enterChord.bind($root, colorNumber)" style="padding-left: 10px;">
+        <span class="button" data-bind="click: $root.enterChord.bind($root, colorNumber)" style="padding-left: 20px;">
             Q
         </span>
 

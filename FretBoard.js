@@ -74,7 +74,11 @@ var FretBoard = function(multiFretBoard) {
     self.setChord = function (colorNumber, chord) {
         var markedNotesArray = self.markedNotesArray();
         var markedNotes = chord.notes.map(function(note){
-            return { note: note, name: NOTE.getName(note) };
+            return {
+                note: note,
+                index: self.key().notes.indexOf(note) + 1,
+                name: NOTE.getName(note)
+            };
         });
         markedNotesArray[colorNumber] = markedNotes;
         self.markedNotesArray(markedNotesArray);
@@ -95,6 +99,7 @@ var FretBoard = function(multiFretBoard) {
                 var noteInfo = {
                     tone: tone,
                     note: note,
+                    index: self.key().notes.indexOf(note) + 1,
                     name: name,
                     fret: f,
                     string: s
@@ -119,19 +124,47 @@ var FretBoard = function(multiFretBoard) {
         createTable();
     };
 
+
+    var fixMarkedNotes = function() {
+        var markedNotesArray = self.markedNotesArray();
+        for (var c in markedNotesArray) {
+            var markedNotes = markedNotesArray[c];
+            for (var n in markedNotes) {
+                var noteInfo = markedNotes[n];
+                noteInfo.index = self.key().notes.indexOf(noteInfo.note) + 1;
+            }
+        }
+        self.markedNotesArray(markedNotesArray);
+    };
+
+    self.noteIndex = function (colorNumber, noteInfo) {
+        if ($root.markedNotesArray()[colorNumber].length <= 0) {
+            return '&nbsp;';
+        }
+        var chordFirstNoteIndex = $root.markedNotesArray()[colorNumber][0].index;
+        var index = ((noteInfo.index - chordFirstNoteIndex + 7) % 7) + 1;
+        return index;
+    };
+
     self.nextKey = function() {
         self.key().nextKey();
         self.key( self.key() );
+        createTable();
+        fixMarkedNotes();
     };
 
     self.previousKey = function() {
         self.key().previousKey();
         self.key( self.key() );
+        createTable();
+        fixMarkedNotes();
     };
 
     self.toggleKeyType = function() {
         self.key().toggleKeyType();
         self.key( self.key() );
+        createTable();
+        fixMarkedNotes();
     };
 
     self.selectColor = function(col) {

@@ -12,6 +12,7 @@ var Key = function( keyNoteName, keyType) {
 
     var majorOffsets = [0, 2, 4, 5, 7, 9, 11];
     var minorOffsets = [0, 2, 3, 5, 7, 8, 10];
+    //TODO: chromatic, pentatonic, etc.
 
     self.keyNote = -1;
     self.notes = [];
