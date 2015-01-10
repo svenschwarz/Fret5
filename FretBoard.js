@@ -107,10 +107,13 @@ var FretBoard = function(multiFretBoard) {
                 noteInfo.markings = [ null, null, null ];
                 for (var c in [0,1,2]) {
                     if (findCellWithNote(self.markedNotesArray()[c], noteInfo) >= 0 && self.markedNotesArray()[c].length > 0) {
-                        if (noteInfo.index > 0)
+                        if (noteInfo.index > 0) {
                             noteInfo.markings[c] = ((noteInfo.index - self.markedNotesArray()[c][0].index + 7) % 7) + 1;
-                        else
+                            //if ([2,4,6].indexOf(noteInfo.markings[c]) >= 0)
+                            //    noteInfo.markings[c] += 7;
+                        } else {
                             noteInfo.markings[c] = "0";
+                        }
                     }
                 }
                 string.push(noteInfo);
