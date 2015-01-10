@@ -143,15 +143,6 @@ var FretBoard = function(multiFretBoard) {
         self.markedNotesArray(markedNotesArray);
     };
 
-    self.noteIndex = function (colorNumber, noteInfo) {
-        if ($root.markedNotesArray()[colorNumber].length <= 0) {
-            return '&nbsp;';
-        }
-        var chordFirstNoteIndex = $root.markedNotesArray()[colorNumber][0].index;
-        var index = ((noteInfo.index - chordFirstNoteIndex + 7) % 7) + 1;
-        return index;
-    };
-
     self.nextKey = function() {
         self.key().nextKey();
         self.key( self.key() );
