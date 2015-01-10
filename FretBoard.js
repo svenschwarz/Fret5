@@ -104,9 +104,15 @@ var FretBoard = function(multiFretBoard) {
                     fret: f,
                     string: s
                 };
-                noteInfo.ismarked1 = (findCellWithNote(self.markedNotesArray()[0], noteInfo) >= 0);
-                noteInfo.ismarked2 = (findCellWithNote(self.markedNotesArray()[1], noteInfo) >= 0);
-                noteInfo.ismarked3 = (findCellWithNote(self.markedNotesArray()[2], noteInfo) >= 0);
+                noteInfo.markings = [ null, null, null ];
+                for (var c in [0,1,2]) {
+                    if (findCellWithNote(self.markedNotesArray()[c], noteInfo) >= 0 && self.markedNotesArray()[c].length > 0) {
+                        if (noteInfo.index > 0)
+                            noteInfo.markings[c] = ((noteInfo.index - self.markedNotesArray()[c][0].index + 7) % 7) + 1;
+                        else
+                            noteInfo.markings[c] = "0";
+                    }
+                }
                 string.push(noteInfo);
             }
             tab.push(string);
@@ -149,22 +155,22 @@ var FretBoard = function(multiFretBoard) {
     self.nextKey = function() {
         self.key().nextKey();
         self.key( self.key() );
-        createTable();
         fixMarkedNotes();
+        createTable();
     };
 
     self.previousKey = function() {
         self.key().previousKey();
         self.key( self.key() );
-        createTable();
         fixMarkedNotes();
+        createTable();
     };
 
     self.toggleKeyType = function() {
         self.key().toggleKeyType();
         self.key( self.key() );
-        createTable();
         fixMarkedNotes();
+        createTable();
     };
 
     self.selectColor = function(col) {

@@ -68,13 +68,11 @@
         <div class="neck-dot" />
         <!-- /ko -->
 
-        <!-- ko if: cell.ismarked1 || cell.ismarked2 || cell.ismarked3 -->
         <div class="markerarea-in-table">
-            <span data-bind="text: (cell.ismarked3 && $root.markedNotesArray()[2].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[2][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker3-in-table': cell.ismarked3, 'nomarker-in-table': !cell.ismarked3}"></span>
-            <span data-bind="text: (cell.ismarked2 && $root.markedNotesArray()[1].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[1][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker2-in-table': cell.ismarked2, 'nomarker-in-table': !cell.ismarked2}, attr: {title: (cell.ismarked2 ? cell.name : '')}"></span>
-            <span data-bind="text: (cell.ismarked1 && $root.markedNotesArray()[0].length > 0 ? ( cell.index <= 0 ? 0 : ((cell.index - $root.markedNotesArray()[0][0].index + 7) % 7)+1 ) : '&nbsp;'), css: {'marker1-in-table': cell.ismarked1, 'nomarker-in-table': !cell.ismarked1}"></span>
+            <span data-bind="text: (cell.markings[2] ? cell.markings[2] : '&nbsp;'), css: {'marker3-in-table': cell.markings[2], 'nomarker-in-table': !cell.markings[2]}"></span>
+            <span data-bind="text: (cell.markings[1] ? cell.markings[1] : '&nbsp;'), css: {'marker3-in-table': cell.markings[1], 'nomarker-in-table': !cell.markings[1]}, attr: {title: (cell.markings[1] ? cell.name : '')}"></span>
+            <span data-bind="text: (cell.markings[0] ? cell.markings[0] : '&nbsp;'), css: {'marker3-in-table': cell.markings[0], 'nomarker-in-table': !cell.markings[0]}"></span>
         </div>
-        <!-- /ko -->
     </div>
 </script>
 
