@@ -15,13 +15,13 @@ var FretBoard = function(multiFretBoard) {
         return self.key().getKeyTypeName();
     });
 
-    var startNotes = [
-        31,  // E   7
-        26,  // B   2
-        22,  // G  10
-        17,  // D   5
-        12,  // A   0
-         7   // E   7
+    var tuning = [
+        2 * 12 +  7,  // E
+        2 * 12 +  2,  // B
+        1 * 12 + 10,  // G
+        1 * 12 +  5,  // D
+        1 * 12 +  0,  // A
+        0 * 12 +  7   // E
     ];
 
 
@@ -90,7 +90,7 @@ var FretBoard = function(multiFretBoard) {
     var createTable = function(){
         var tab = [];
         for (var s = 0; s < 6; s++) {
-            var start = startNotes[s];
+            var start = tuning[s];
             var string = [];
             for (var f = 0; f < 22; f++) {
                 var tone = start + f;
