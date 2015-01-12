@@ -1,7 +1,6 @@
 
-
 define(
-    ["knockout", "views", "Note", "ChordDB"],
+        ["knockout", "views", "Note", "ChordDB"],
     function(
         ko, views, Note, ChordDB
     ){

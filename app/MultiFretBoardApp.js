@@ -4,14 +4,14 @@ define(
     function(
         views, MultiFretBoard, MultiFretBoard_html
     ){
-        var self = this;
+        var object = {};
 
-        self.run = function(){
+        object.run = function(){
             views.clearSection("mainContent");
             var vm = new MultiFretBoard();
             var id = views.addToSection("mainContent", "MultiFretBoard.html", "MultiFretBoard", vm, true);
         };
 
-        return self;
+        return object;
     }
 );

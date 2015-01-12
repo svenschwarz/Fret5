@@ -1,6 +1,6 @@
 
 define(
-    ["Note"],
+        ["Note"],
     function(
         Note
     ){

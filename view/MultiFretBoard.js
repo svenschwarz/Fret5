@@ -1,5 +1,4 @@
 
-
 define(
         ["views", "view/FretBoard", "text!view/FretBoard.html", "Key"],
     function(
