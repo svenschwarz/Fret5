@@ -14,7 +14,7 @@ define(
             self.fretBoardId = null;
 
             self.key = ko.observable( multiFretBoard.createMatchingKey() );
-            self.table = ko.observableArray([]);
+            self.table = ko.observableArray(null);
             self.markedNotesArray = ko.observableArray([ [], [], [] ]);
             self.selectedColor = ko.observable(0);
             self.matchingChordsArray = ko.observableArray([ [], [], [] ]);
@@ -68,7 +68,9 @@ define(
                 self.markedNotesArray(markedNotesArray);
 
                 findMatchingChordsForColor(self.selectedColor());
-                createTable();
+
+                //createTable();
+                updateMarkings(cell.note);
             };
 
             self.enterChord = function (colorNumber) {
@@ -112,23 +114,53 @@ define(
                             fret: f,
                             string: s
                         };
-                        noteInfo.markings = [ null, null, null ];
+
+                        var markings = [ null, null, null ];
                         for (var c in [0,1,2]) {
                             if (findCellWithNote(self.markedNotesArray()[c], noteInfo) >= 0 && self.markedNotesArray()[c].length > 0) {
                                 if (noteInfo.index > 0) {
-                                    noteInfo.markings[c] = ((noteInfo.index - self.markedNotesArray()[c][0].index + 7) % 7) + 1;
+                                    markings[c] = ((noteInfo.index - self.markedNotesArray()[c][0].index + 7) % 7) + 1;
                                     //if ([2,4,6].indexOf(noteInfo.markings[c]) >= 0)
                                     //    noteInfo.markings[c] += 7;
                                 } else {
-                                    noteInfo.markings[c] = "0";
+                                    markings[c] = "0";
                                 }
                             }
                         }
+                        noteInfo.markings = ko.observableArray(markings);
                         string.push(noteInfo);
                     }
                     tab.push(string);
                 }
                 self.table(tab);
+            };
+
+            var updateMarkings = function(changedNote) {
+                var table = self.table();
+                for (var s = 0; s < 6; s++) {
+                    var string = table[s];
+                    for (var f = 0; f < 22; f++) {
+                        var noteInfo = string[f];
+                        if (noteInfo.note != changedNote)
+                            continue;
+                        var markings = noteInfo.markings();
+                        for (var c in [0,1,2]) {
+                            if (findCellWithNote(self.markedNotesArray()[c], noteInfo) >= 0 && self.markedNotesArray()[c].length > 0) {
+                                if (noteInfo.index > 0) {
+                                    markings[c] = ((noteInfo.index - self.markedNotesArray()[c][0].index + 7) % 7) + 1;
+                                    //if ([2,4,6].indexOf(noteInfo.markings[c]) >= 0)
+                                    //    noteInfo.markings[c] += 7;
+                                } else {
+                                    markings[c] = "0";
+                                }
+                            } else {
+                                markings[c] = null;
+                            }
+                        }
+                        noteInfo.markings(markings);
+                    }
+                }
+
             };
 
             self.removeThisFretBoard = function() {
