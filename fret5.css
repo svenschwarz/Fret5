@@ -16,6 +16,10 @@ body {
     background-color: burlywood;
 }
 
+#mainContent {
+    margin-top: 20px;  /* leave some space on top (iphone uses that for battery state etc. */
+}
+
 .g-table {
     display: table;
     border-style: none;
