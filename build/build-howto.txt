@@ -1,0 +1,13 @@
+1. install node.js on your machine
+    http://nodejs.org/
+
+2. install requirejs:
+    npm install -g requirejs
+
+3. download r.js
+    http://requirejs.org/docs/release/2.1.15/r.js
+
+---
+
+4. enter this build directory and call
+    node r.js -o build.js
