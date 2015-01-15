@@ -23,6 +23,18 @@ define(
                 return self.key().getKeyTypeName();
             });
 
+            self.markingColors = [
+                "#ffff00",
+                "#ff2000",
+                "#90ee90"
+            ];
+
+            self.markingBackgroundColors = [
+                "#ffffc0",
+                "#ffd0c0",
+                "#e0ffe0"
+            ];
+
             var tuning = [
                 2 * 12 +  7,  // E
                 2 * 12 +  2,  // B
@@ -31,7 +43,6 @@ define(
                 1 * 12 +  0,  // A
                 0 * 12 +  7   // E
             ];
-
 
             var findCellWithNote = function(array, cell){
                 for (var i = 0; i < array.length; i++) {

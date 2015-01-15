@@ -98,10 +98,6 @@ body {
     font-weight: bold;
 }
 
-.note-in-line {
-    padding-left: 10px;
-}
-
 .markerarea-in-table {
     position: absolute;
     left: 6px;
@@ -115,49 +111,13 @@ body {
     /*opacity: 0.5;*/
 }
 
-.marked1-in-line {
-    padding: 8px;
-    background-color: #ffffc0;
-    line-height: 36px;
-    vertical-align: middle;
-    z-index: 30;
-    color: gray;
-    font-weight: bold;
-}
-
-.marked2-in-line {
-    padding: 8px;
-    background-color: #ffd0c0;
-    line-height: 36px;
-    vertical-align: middle;
-    z-index: 30;
-    color: gray;
-    font-weight: bold;
-}
-
-.marked3-in-line {
-    padding: 8px;
-    background-color: #e0ffe0;
-    line-height: 36px;
-    vertical-align: middle;
-    z-index: 30;
-    color: gray;
-    font-weight: bold;
-}
-
-.marked1-in-line.selected, .marked2-in-line.selected, .marked3-in-line.selected  {
-    border-style: solid;
-    border-width: 2px;
-    border-color: gray;
-}
-
 .nomarker-in-table {
     padding: 3px;
     width: 16px;
     display: inline-block;
 }
 
-.marker1-in-table {
+.marker-in-table {
     color: #ffff00;
     font-size: 24px;
     font-weight: bold;
@@ -166,22 +126,23 @@ body {
     display: inline-block;
 }
 
-.marker2-in-table {
-    color: #ff2000;
-    padding: 3px;
-    font-size: 24px;
+.marked-in-line {
+    padding: 8px;
+    line-height: 36px;
+    vertical-align: middle;
+    z-index: 30;
+    color: gray;
     font-weight: bold;
-    width: 16px;
-    display: inline-block;
 }
 
-.marker3-in-table {
-    color: #90ee90;
-    padding: 3px;
-    font-size: 24px;
-    font-weight: bold;
-    width: 16px;
-    display: inline-block;
+.marked-in-line.selected  {
+    border-style: solid;
+    border-width: 2px;
+    border-color: gray;
+}
+
+.note-in-line {
+    padding-left: 10px;
 }
 
 .highlighted {
