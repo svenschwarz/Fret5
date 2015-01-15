@@ -15,7 +15,7 @@
     </div>
 
     <div data-bind="template: { name: 'T_FretTable', data: table }"
-         style="width: 100%; height: 300px; overflow-x: auto; overflow-y: visible;" />
+         style="width: 100%; height: 270px; overflow-x: auto; overflow-y: visible;" />
     <br/>
 
     <table>
@@ -56,7 +56,7 @@
 <script type="text/html" id="T_FretTableCell">
     <div class="g-td" data-bind="click: $root.clickOnCell.bind($root, cell)">
         <!-- ko if: $root.key().contains(cell.note) -->
-        <div class="note-in-table" data-bind="text: cell.name" />
+        <div class="note-in-table" data-bind="text: cell.name, style: {opacity: ((cell.markings()[1] ? 0.25 : 0.5))}" />
         <!-- /ko -->
 
         <!-- ko if: cell.fret > 0 -->
