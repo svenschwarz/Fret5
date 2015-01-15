@@ -202,15 +202,16 @@ body {
     text-align: center;
 }
 
-.button:hover {
-    border-color: cornflowerblue;
-    background-color: cornflowerblue;
-    color: black;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 12px;
-    padding: 4px;
-}
+/* does not work on iphone (hover stays even after releasing button) */
+/*.button:hover {*/
+    /*border-color: cornflowerblue;*/
+    /*background-color: cornflowerblue;*/
+    /*color: black;*/
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    /*border-radius: 12px;*/
+    /*padding: 4px;*/
+/*}*/
 
 .string-line {
     position: absolute;
