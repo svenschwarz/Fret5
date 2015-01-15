@@ -13,7 +13,6 @@
         </div>
 
     </div>
-    <br/>
 
     <div data-bind="template: { name: 'T_FretTable', data: table }"
          style="width: 100%; height: 300px; overflow-x: auto; overflow-y: visible;" />
@@ -97,11 +96,11 @@
 
         <span data-bind="foreach: { data: $root.matchingChordsArray()[colorNumber], as: 'chord'}">
             <label data-bind="text: chord.name, click: $root.setChord.bind($root, colorNumber, chord)"
-                   class="button" style="padding-left: 20px;"
+                   class="button"
                     title="Set this chord"/>
         </span>
 
-        <span class="button" data-bind="click: $root.enterChord.bind($root, colorNumber)" style="padding-left: 20px;">
+        <span class="button" data-bind="click: $root.enterChord.bind($root, colorNumber)">
             Q
         </span>
 
