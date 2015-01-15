@@ -4,8 +4,7 @@
         <span class="button" data-bind="click: previousKey">&lt;</span>
         <span data-bind="text: key().name" style="display: inline-block; width: 34px; text-align: center;" />
         <span class="button" data-bind="click: nextKey">&gt;</span>
-        &nbsp;
-        <span class="button" data-bind="text: '(' + keyTypeName() + ')', click: toggleKeyType" />
+        <span class="button" data-bind="text: keyTypeName(), click: toggleKeyType" />
 
         <div class="button" style="position: absolute; right: 8px;" title="Click to remove this fret board"
              data-bind="click: $root.removeThisFretBoard" >
