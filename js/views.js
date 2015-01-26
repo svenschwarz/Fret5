@@ -7,9 +7,13 @@ define(
         var object = {};
 
         object.clearSection = function(section) {
-            $('body #' + section + ' *').each(function() {
-                ko.removeNode(this);
-            });
+            if($("body #" + section).length > 0) {
+                $('body #' + section + ' *').each(function () {
+                    ko.removeNode(this);
+                });
+            } else {
+                $("body").append( "<div id='" + section + "'></div>" );
+            }
         };
 
         object.removeFromSection = function(section, toRemove) {

@@ -14,10 +14,26 @@
 
 body {
     background-color: burlywood;
+    margin: 0px;
+}
+
+#helpContent {
+    padding: 10px;
+}
+
+#titleContent {
+    margin: 0px;
+
+    padding-top: 30px;       /* leave some space on top (iphone uses that for battery state etc. */
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    background-color: #cea877;
 }
 
 #mainContent {
-    margin-top: 30px;  /* leave some space on top (iphone uses that for battery state etc. */
+    padding: 10px;
 }
 
 .g-table {
